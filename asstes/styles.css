@@ -1,0 +1,228 @@
+
+            
+            /* Custom CSS for additional animations */
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.05);
+  }
+}
+
+/* Apply animations to specific elements */
+.feature-card:hover {
+  animation: float 3s ease-in-out infinite;
+}
+
+.cta-button:hover {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+.body {
+  margin: 0;
+  padding: 0;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.liquid {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background: #e74c3c;
+  border-top-left-radius: 50% 20px;
+  border-top-right-radius: 50% 20px;
+  animation: wave 3s infinite linear alternate;
+}
+
+@keyframes wave {
+  0% {
+      transform: translateY(0px);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+  100% {
+      transform: translateY(0px);
+  }
+}
+.footer-text {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-bg-move {
+  background-size: 200% 200%;
+  animation: gradientMove 10s ease infinite;
+}
+/* Keyframes for Animations */
+@keyframes gradient {
+  0% { opacity: 0.2; }
+  50% { opacity: 0.3; }
+  100% { opacity: 0.2; }
+}
+
+@keyframes underline {
+  0% { width: 0; }
+  100% { width: 6rem; }
+}
+
+@keyframes particle {
+  0% { transform: translateY(0) translateX(0); opacity: 1; }
+  100% { transform: translateY(-100px) translateX(50px); opacity: 0; }
+}
+
+/* Apply Animations */
+.animate-gradient {
+  animation: gradient 5s infinite ease-in-out;
+}
+
+.animate-underline {
+  animation: underline 1s ease-out forwards;
+}
+
+.animate-particle {
+  animation: particle 3s infinite ease-in-out;
+}
+
+/* Particle Styling */
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #48A860;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.particle-1 { top: 10%; left: 20%; animation-delay: 0s; }
+.particle-2 { top: 30%; left: 50%; animation-delay: 1s; }
+.particle-3 { top: 50%; left: 80%; animation-delay: 2s; }
+
+/* Footer Wave Animation */
+.wave svg {
+  animation: wave 10s infinite linear;
+}
+
+@keyframes wave {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float { animation: float 3s ease-in-out infinite; }
+.animate-gradient { animation: gradient 6s ease infinite; }
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.particle {
+  position: absolute;
+  background: rgba(72, 168, 96, 0.2);
+  border-radius: 50%;
+  animation: particle 5s linear infinite;
+}
+@keyframes particle {
+  0% { transform: translateY(0) scale(0); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-200px) scale(1.5); opacity: 0; }
+}
+.particle-1 { top: 10%; left: 20%; width: 10px; height: 10px; animation-delay: 0s; }
+.particle-2 { top: 30%; left: 70%; width: 8px; height: 8px; animation-delay: 2s; }
+.particle-3 { top: 50%; left: 40%; width: 12px; height: 12px; animation-delay: 4s; }
+
+/* Enhanced Animations */
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.animate-pulse-slow { animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+.floating-circle {
+  width: 6rem;
+  height: 6rem;
+  background: rgba(72, 168, 96, 0.2);
+  border-radius: 50%;
+  position: absolute;
+  top: 25%;
+  left: 20%;
+  animation: float 6s ease-in-out infinite;
+}
+.floating-triangle {
+  width: 8rem;
+  height: 8rem;
+  background: rgba(72, 168, 96, 0.15);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  position: absolute;
+  top: 30%;
+  right: 15%;
+  animation: float 8s ease-in-out infinite;
+}
+.floating-wave {
+  width: 10rem;
+  height: 10rem;
+  background: rgba(72, 168, 96, 0.1);
+  border-radius: 0.5rem;
+  position: absolute;
+  bottom: 25%;
+  left: 30%;
+  animation: float 7s ease-in-out infinite;
+}
+body, .hero-content h1, .hero-content p, .premium-badge {
+  font-family: 'Poppins', sans-serif;
+}
+/* Unique Gradient Overlay Effect */
+.hero-overlay {
+  background: linear-gradient(135deg, rgba(72, 168, 96, 0.3), rgba(60, 140, 79, 0.3));
+  backdrop-filter: blur(2px);
+}
+/* Premium Badge Styles */
+.premium-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+  background: rgba(72, 168, 96, 0.15);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  margin-bottom: 1.5rem;
+}
+/* Custom Unique Animations */
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.hero-content {
+  animation: slideUp 1s ease-out;
+}
